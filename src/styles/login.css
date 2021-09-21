@@ -1,0 +1,198 @@
+.login-window {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  overflow: hidden;
+  z-index: 9999;
+  background-color: rgba(75, 74, 74, 0.8);
+}
+.login-window.my-login-enter {
+  opacity: 0;
+}
+.login-window.my-login-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.login-window.my-login-exit {
+  height: 100%;
+  opacity: 1;
+}
+.login-window.my-login-exit-active {
+  opacity: 0;
+  height: 0;
+  transition: all 0.8s ease-in-out;
+}
+.login-window .login-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  min-width: 400px;
+  min-height: 650px;
+  width: 30%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 1.5em;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8), -1px -1px 10px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+.login-window .login-container .login-heading-box {
+  flex: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  font-family: "Luckiest Guy", cursive;
+  background: url("../image/movie.jpeg") bottom no-repeat;
+  background-size: cover;
+  box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.3), 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.login-window .login-container .login-heading-box::after {
+  content: "";
+  background: inherit;
+  width: inherit;
+  height: 60%;
+  position: absolute;
+  bottom: -60%;
+  transform: scaleY(-1);
+  opacity: 0.5;
+}
+.login-window .login-container .login-heading-box::before {
+  content: "";
+  width: inherit;
+  height: 61%;
+  position: absolute;
+  bottom: -61%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), white);
+  z-index: 1;
+}
+.login-window .login-container .login-heading-box .login-heading-title {
+  margin: 0;
+  font-size: 3em;
+  color: white;
+  text-shadow: 1px 1px 10px black;
+}
+.login-window .login-container .login-heading-box p {
+  margin: 0;
+  padding: 0.2em;
+  font-size: 5em;
+  color: white;
+}
+.login-window .login-container .login-content-box {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+.login-window .login-container .login-content-box .login-tabs {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 5em;
+  font-family: "Libre Barcode 39 Text", cursive;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.336);
+}
+.login-window .login-container .login-content-box .login-tabs span {
+  flex: 1;
+  padding-top: 0.1em;
+  height: 100%;
+  font-size: 3em;
+  text-align: center;
+  background-color: #fff;
+  z-index: 1;
+}
+.login-window .login-container .login-content-box .login-tabs span:hover {
+  cursor: pointer;
+}
+.login-window .login-container .login-content-box .login-tabs span:first-child {
+  margin-right: 0.5em;
+  padding-left: 0.5em;
+}
+.login-window .login-container .login-content-box .login-tabs span:last-child {
+  margin-left: 0.5em;
+  padding-right: 0.5em;
+}
+.login-window .login-container .login-content-box .login-tabs.login-tab-selected .login-tab {
+  position: relative;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1), -1px -1px 5px rgba(0, 0, 0, 0.1);
+  color: #000;
+  background-color: transparent;
+  z-index: 2;
+}
+.login-window .login-container .login-content-box .login-tabs.login-tab-selected .login-tab::after {
+  position: absolute;
+  top: 0;
+  right: -0.1em;
+  transform: translateX(100%);
+  content: "";
+  border-bottom: 2em solid transparent;
+  border-right: 1em solid #fff;
+  pointer-events: none;
+}
+.login-window .login-container .login-content-box .login-tabs.register-tab-selected .register-tab {
+  position: relative;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1), -1px -1px 5px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  color: #000;
+  z-index: 2;
+}
+.login-window .login-container .login-content-box .login-tabs.register-tab-selected .register-tab::after {
+  position: absolute;
+  top: 0;
+  left: -0.1em;
+  transform: translateX(-100%);
+  content: "";
+  border-top: 2em solid #fff;
+  border-right: 1em solid transparent;
+  pointer-events: none;
+}
+.login-window .login-container .login-content-box .form-container {
+  flex: 5;
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1;
+}
+.login-window .login-container .login-content-box .form-container .form-card {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 55%;
+  height: 100%;
+  margin: 0 auto;
+}
+.login-window .login-container .login-content-box .form-container .form-card .mb-3 {
+  margin-bottom: 0.3em !important;
+}
+.login-window .login-container .login-content-box .form-container .form-card .mb-3 .form-label {
+  margin-bottom: 0.2em;
+}
+.login-window .login-container .login-content-box .form-container .form-card .mb-3 .text-muted {
+  color: red !important;
+  font-size: 0.8em;
+}
+.login-window .login-container .login-content-box .form-container .form-card .mb-3.control-register .form-control {
+  height: 1em;
+  font-size: 1em;
+}
+.login-window .login-container .login-content-box .form-container .form-card .mb-3.control-register label {
+  padding: 0.4em 0.4em;
+}
+.login-window .login-container .login-content-box .form-container .form-card .form-submit-button {
+  margin: 1em 0;
+  background-color: rgba(13, 37, 63, 0.8);
+  border-color: rgba(13, 37, 63, 0.8);
+  font-family: "anton", cursive;
+}
+
+/*# sourceMappingURL=login.css.map */
