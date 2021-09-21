@@ -13,3 +13,8 @@
 
 [build.environment]
   REACT_APP_API_BASE_URL = "https://dbmovie-zxw.herokuapp.com/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
